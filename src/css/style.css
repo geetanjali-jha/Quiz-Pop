@@ -1,6 +1,6 @@
-#mainDiv{
-  border:solid;
-  background-color:whitesmoke;
+#mainDiv {
+  border: solid;
+  background-color: whitesmoke;
   text-align: center;
   width: 80%;
   height: 300px;
@@ -9,28 +9,27 @@
   padding-top: 10%;
 }
 
-#topicDiv{
+#topicDiv {
   /* margin-top: 20%; */
   margin-bottom: 5%;
 }
 
-#scoresDiv{
+#scoresDiv {
   text-align: right;
   margin-right: 2%;
   text-decoration: underline;
 }
 
-#musicButton{
-  background-color:orange;
+#musicButton {
+  background-color: orange;
   width: 100px;
   height: 40px;
   display: inline-block;
   text-align: center;
   padding: 1%;
   margin-top: 2%;
-
 }
-#modernArtButton{
+#modernArtButton {
   background-color: teal;
   width: 100px;
   height: 40px;
@@ -39,7 +38,7 @@
   display: inline-block;
   text-align: center;
 }
-#codingButton{
+#codingButton {
   background-color: rgb(6, 119, 6);
   width: 100px;
   height: 40px;
@@ -48,31 +47,28 @@
   display: inline-block;
   text-align: center;
 }
-#questionDiv{
+#questionDiv {
   background-color: rgb(120, 35, 120);
-
 }
-#optionOne{
+#optionOne {
   text-align: center;
   display: flex;
-
 }
-#optionTwo{
+#optionTwo {
   text-align: center;
   display: flex;
-
 }
-#optionThree{
+#optionThree {
   text-align: center;
   display: flex;
 }
 
-#optionFour{
+#optionFour {
   text-align: center;
   display: flex;
 }
-#previousBtn{
-  background-color:teal;
+#previousBtn {
+  background-color: teal;
   width: 100px;
   height: 40px;
   display: inline-block;
@@ -82,12 +78,9 @@
   border: solid;
   border-radius: 8px;
   margin-bottom: 1%;
- 
- 
-
 }
-#nextBtn{
-  background-color:teal;
+#nextBtn {
+  background-color: teal;
   width: 100px;
   height: 40px;
   display: inline-block;
@@ -102,4 +95,5 @@
 
 #question-box {
   text-align: left;
+  font-family: 'Pacifico', cursive;
 }

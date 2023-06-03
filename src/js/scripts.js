@@ -26,9 +26,13 @@ function loadQuiz(data) {
   console.log(data);
 
   //get parent Div
-  var parentNode = document.getElementById("mainDiv");
-  var topicBox = document.getElementById("topicDiv");
-  topicBox.remove();
+  var parentNode = document.getElementById("mainBody");
+
+  var selectTextBoxNode = document.getElementById("selectTextBox");
+  selectTextBoxNode.remove();
+
+  var mainTopicsBoxNode = document.getElementById("mainTopicsBox");
+  mainTopicsBoxNode.remove();
 
   // create Question Box --> it will contain question details
   var questionBox = document.createElement("div");

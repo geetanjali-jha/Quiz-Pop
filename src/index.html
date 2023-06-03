@@ -5,17 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your JavaScript Playground</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mainPageStyle.css" />
+
   </head>
   <body>
-    <div id="mainDiv">
-        <div id="scoresDiv">
-            <p>Scores</p>
+    <div id="mainBody">
+      <div id="headerBox">
+        <h1 id="welcomeTextBox">Welcome to Quiz Pop</h1>
+      </div>
+      <div id="selectTextBox">
+        <h2>Select a Topic to Start a Quiz!</h2>
+      </div>
+      <div id="mainTopicsBox">
+        <div id="musicTopic">
+            Music
         </div>
-        <div id="topicDiv">
-            <button id="musicButton">Music</button>
-            <button id="modernArtButton">Modern Art</button>
-            <button id="codingButton">Coding</button>
+        <div id="modArtTopic">
+            Modern-Art
         </div>
+        <div id="codingTopic">
+            Coding
+        </div>
+        <div id="buttonBox">
+          <button id="musicButton">Music</button>
+          <button id="modernArtButton">Modern Art</button>
+          <button id="codingButton">Coding</button>
+        </div>
+      </div>
     </div>
     <script type="module" src="js/index.js"></script>
     <script type="module" src="js/scripts.js"></script>

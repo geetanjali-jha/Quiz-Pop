@@ -20,33 +20,6 @@
   text-decoration: underline;
 }
 
-#musicButton {
-  background-color: orange;
-  width: 100px;
-  height: 40px;
-  display: inline-block;
-  text-align: center;
-  padding: 1%;
-  margin-top: 2%;
-}
-#modernArtButton {
-  background-color: teal;
-  width: 100px;
-  height: 40px;
-  margin-left: 1%;
-  padding: 1%;
-  display: inline-block;
-  text-align: center;
-}
-#codingButton {
-  background-color: rgb(6, 119, 6);
-  width: 100px;
-  height: 40px;
-  margin-left: 1%;
-  padding: 1%;
-  display: inline-block;
-  text-align: center;
-}
 #questionDiv {
   background-color: rgb(120, 35, 120);
 }

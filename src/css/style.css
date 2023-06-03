@@ -2,7 +2,7 @@
   border: solid;
   background-color: whitesmoke;
   text-align: center;
-  width: 80%;
+  width: 77%;
   height: 300px;
   margin-left: 10%;
   margin-top: 10%;
@@ -23,29 +23,32 @@
 #musicButton {
   background-color: orange;
   width: 100px;
-  height: 40px;
+  height: 50px;
   display: inline-block;
   text-align: center;
   padding: 1%;
   margin-top: 2%;
+  font-family: inherit;
 }
 #modernArtButton {
   background-color: teal;
   width: 100px;
-  height: 40px;
+  height: 55px;
   margin-left: 1%;
   padding: 1%;
   display: inline-block;
   text-align: center;
+  font-family: inherit;
 }
 #codingButton {
   background-color: rgb(6, 119, 6);
   width: 100px;
-  height: 40px;
+  height: 50px;
   margin-left: 1%;
   padding: 1%;
   display: inline-block;
   text-align: center;
+  font-family: inherit;
 }
 #questionDiv {
   background-color: rgb(120, 35, 120);
@@ -53,19 +56,23 @@
 #optionOne {
   text-align: center;
   display: flex;
+  margin: 20px;
 }
 #optionTwo {
   text-align: center;
   display: flex;
+  margin: 20px;
 }
 #optionThree {
   text-align: center;
   display: flex;
+  margin: 20px;
 }
 
 #optionFour {
   text-align: center;
   display: flex;
+  margin: 20px;
 }
 #previousBtn {
   background-color: teal;
@@ -96,4 +103,45 @@
 #question-box {
   text-align: left;
   font-family: 'Pacifico', cursive;
+  margin-left: 10px;
+  position: relative;
+}
+
+#title,
+#score,
+#close-button {
+  position: absolute;
+  z-index: 1;
+  font-family: inherit;
+}
+
+#title {
+  top: -200px;
+  left: 10px;
+  border-bottom: 3px solid black;
+  width: 99%;
+}
+
+#score {
+  top: -220px;
+  left: 800px;
+}
+
+#close-btn {
+  position: absolute;
+  top: -205px;
+  right: 10px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 80%;
+}
+#radio-btn {
+  margin: 10px;
+}
+
+#questionHeader {
+  position: absolute;
+  top: -150px;
+  padding-left: 700px;
+  text-align: center;
 }

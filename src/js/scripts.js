@@ -19,7 +19,6 @@ modernArtBtn.addEventListener('click', () => {
 // Add Event listener for coding click
 var codingBtn = document.getElementById("codingButton");
 codingBtn.addEventListener('click', () => {
-    console.log(codingData);
     loadQuiz(codingData[0]);
 });
 
@@ -30,11 +29,11 @@ function loadQuiz(data) {
     //get parent Div
     var parentNode = document.getElementById("mainDiv");
     var topicBox = document.getElementById("topicDiv");
-
     topicBox.remove();
 
     // create Question Box --> it will contain question details
     var questionBox = document.createElement("div");
+    questionBox.setAttribute('id', 'question-box');
 
     // create Question paragraph
     var questionPara = document.createElement("p");
@@ -50,36 +49,41 @@ function loadQuiz(data) {
     firstLabel.innerHTML = data.options[0];
     var break1 = document.createElement("br");
 
-    //create first  Option
+    //create second  Option
     var secondOption = document.createElement("input");
     secondOption.setAttribute("type", "radio");
     secondOption.setAttribute("name", "radioButton");
     
-    //set label for first option
+    //set label for second option
     var secondLabel = document.createElement("Label");
     secondLabel.innerHTML = data.options[1];
     var break2 = document.createElement("br");
 
-    //create first  Option
+    //create third  Option
     var thirdOption = document.createElement("input");
     thirdOption.setAttribute("type", "radio");
     thirdOption.setAttribute("name", "radioButton");
     
-    //set label for first option
+    //set label for third option
     var thirdLabel = document.createElement("Label");
     thirdLabel.innerHTML = data.options[2];
     var break3 = document.createElement("br");
 
 
-    //create first  Option
+    //create fourth  Option
     var fourthOption = document.createElement("input");
     fourthOption.setAttribute("type", "radio");
     fourthOption.setAttribute("name", "radioButton");
     
-    //set label for first option
+    //set label for fourth option
     var fourthLabel = document.createElement("Label");
     fourthLabel.innerHTML = data.options[3];
     var break4 = document.createElement("br");
+
+    // Create a button for Previous Question
+    var prevButton = document.createElement("button");
+    var text = document.createTextNode("Previous");
+    prevButton.appendChild(text);
 
     questionBox.appendChild(questionPara);
 
@@ -98,6 +102,8 @@ function loadQuiz(data) {
     questionBox.appendChild(fourthOption);
     questionBox.appendChild(fourthLabel);
     questionBox.appendChild(break4);
+
+    questionBox.appendChild(prevButton);
 
     parentNode.appendChild(questionBox);
 }

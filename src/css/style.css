@@ -2,9 +2,11 @@
   border:solid;
   background-color:whitesmoke;
   text-align: center;
-  width: 60%;
-  margin-left: 20%;
+  width: 80%;
+  height: 300px;
+  margin-left: 10%;
   margin-top: 10%;
+  padding-top: 10%;
 }
 
 #topicDiv{
@@ -98,3 +100,6 @@
   margin-bottom: 1%;
 }
 
+#question-box {
+  text-align: left;
+}

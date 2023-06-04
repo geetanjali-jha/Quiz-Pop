@@ -60,14 +60,13 @@
   background-color: teal;
   width: 100px;
   height: 40px;
-  display: inline-block;
   text-align: center;
   padding: 1%;
   margin-top: 2%;
-  margin-left: 75%;
   border: solid;
   border-radius: 8px;
   margin-bottom: 1%;
+  float: right;
 }
 
 #question-box {
@@ -77,8 +76,6 @@
   position: relative;
 }
 
-#title,
-#score,
 #close-button {
   position: absolute;
   z-index: 1;
@@ -86,32 +83,40 @@
 }
 
 #title {
-  top: -200px;
-  left: 10px;
   border-bottom: 3px solid black;
-  width: 99%;
-}
-
-#score {
-  top: -220px;
-  left: 800px;
+  width: 100%;
+  
 }
 
 #close-btn {
-  position: absolute;
-  top: -205px;
-  right: 10px;
   border-radius: 5px;
+  float: right;
   font-family: inherit;
-  font-size: 80%;
+  font-size: 15px;
+  display: inline-block;
+  margin-top: 1%;
+  background-color: teal;
 }
+
 #radio-btn {
   margin: 10px;
 }
 
 #questionHeader {
-  position: absolute;
-  top: -150px;
-  padding-left: 700px;
   text-align: center;
+}
+
+#score {
+  margin-left: 40%;
+  display: inline-block;
+}
+
+#textPara {
+  display: inline-block;
+}
+
+#mainBody {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }

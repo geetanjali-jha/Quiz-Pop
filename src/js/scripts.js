@@ -35,15 +35,27 @@ function loadQuiz(data) {
   // create Question Box --> it will contain question details
   var questionBox = document.createElement('div');
   questionBox.setAttribute('id', 'question-box');
-  var titleElement = document.createElement('div');
-  titleElement.setAttribute('id', 'title');
-  titleElement.textContent = 'Music-Quiz Pop';
+
+
+  var titleDiv = document.createElement('div');
+  titleDiv.setAttribute('id', 'title');
+
+  var textPara = document.createElement('p');
+  textPara.innerHTML = "Music-Quiz Pop";
+  textPara.setAttribute('id', "textPara");
+
   var scoreElement = document.createElement('p');
   scoreElement.setAttribute('id', 'score');
-  scoreElement.textContent = 'Score: 0/10';
+  scoreElement.innerHTML = "Score";
+
   var closeButton = document.createElement('button');
   closeButton.setAttribute('id', 'close-btn');
   closeButton.textContent = 'Close Quiz';
+
+  titleDiv.appendChild(textPara);
+  titleDiv.appendChild(scoreElement);
+  titleDiv.appendChild(closeButton);
+
   var questionHeader = document.createElement('h2');
   questionHeader.setAttribute('id', 'questionHeader');
   questionHeader.innerHTML = 'Question 1/10: Question Description';
@@ -104,6 +116,8 @@ function loadQuiz(data) {
   nextButton.setAttribute('id', 'nextBtn');
   nextButton.appendChild(text);
 
+  questionBox.appendChild(titleDiv);
+  questionBox.appendChild(questionHeader);
   questionBox.appendChild(questionPara);
 
   questionBox.appendChild(firstOption);
@@ -124,9 +138,6 @@ function loadQuiz(data) {
 
   questionBox.appendChild(prevButton);
   questionBox.appendChild(nextButton);
+
   parentNode.appendChild(questionBox);
-  questionBox.appendChild(titleElement);
-  questionBox.appendChild(scoreElement);
-  questionBox.appendChild(closeButton);
-  questionBox.appendChild(questionHeader);
 }

@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Great+Vibes&family=Lobster&family=Marck+Script&family=Pacifico&family=Poiret+One&family=Roboto+Slab&display=swap');
-
 #headerBox {
     text-align: center;
-    border-bottom: 2px solid;
 }
 
 #selectTextBox {
@@ -22,7 +19,6 @@
     height: 400px;
     background-image: url('../images/music.jpg');
     background-position: center;
-    font-family: 'Pacifico', cursive;
 }
 #modArtTopic{
     margin-left: 3%;
@@ -122,5 +118,23 @@
 
 #teamInfoBox {
   float: right;
+}
+
+#scoreDivFinal {
+
+}
+
+#reportDivFinal {
+  height: 120Px;
+  border: 1px solid;
+  margin-top: 1%;
+}
+
+#scoreBtn {
+  background-color: teal;
+  text-align: center;
+  margin-left: 45%;
+  height: 50px;
+  width: 150px;
 }
 

@@ -213,8 +213,13 @@ function loadQuiz(data) {
   questionBox.appendChild(fourthLabel);
   questionBox.appendChild(break4);
 
+  var buttonContainer = document.createElement("div");
+  buttonContainer.setAttribute("id", "buttonContainer");
+  buttonContainer.appendChild(nextButton);
+
   questionBox.appendChild(checkButton);
-  questionBox.appendChild(nextButton);
+  questionBox.appendChild(buttonContainer);
+
   parentNode.appendChild(questionBox);
 
   var radios = document.querySelectorAll(
@@ -407,24 +412,36 @@ function loadQuiz(data) {
         questionBox.appendChild(fourthOption);
         questionBox.appendChild(fourthLabel);
         questionBox.appendChild(break4);
-      
-        questionBox.appendChild(prevButton);
         questionBox.appendChild(checkButton);
-        questionBox.appendChild(nextButton);
+
+        var buttonContainer = document.createElement("div");
+        buttonContainer.setAttribute("id", "buttonContainer");
+
+        if (data.id > 1) {
+          buttonContainer.appendChild(prevButton);
+        }
+        
+        if (data.id < 10) {
+          buttonContainer.appendChild(nextButton);
+        }
+        questionBox.appendChild(checkButton);
+        questionBox.appendChild(buttonContainer);
       
         parentNode.appendChild(questionBox);
       
-        //Add Event listner for Next Button click
-        var nxtBtn = document.getElementById('nextBtn');
-        nxtBtn.addEventListener('click', (event) => {
-      
-            var index = event.target.getAttribute("index");
-            var category = event.target.getAttribute("category");
-            console.log("index: ", index);
-            console.log("category: ", category);
-      
-            loadNextQuestion(dataset[category][parseInt(index) + 1]);
-        });
+        if (data.id < 10) {
+          //Add Event listner for Next Button click
+          var nxtBtn = document.getElementById('nextBtn');
+          nxtBtn.addEventListener('click', (event) => {
+        
+              var index = event.target.getAttribute("index");
+              var category = event.target.getAttribute("category");
+              console.log("index: ", index);
+              console.log("category: ", category);
+        
+              loadNextQuestion(dataset[category][parseInt(index) + 1]);
+          });
+        }
 
         //Add Event listner for Check Button click
         var chkBtn = document.getElementById("checkBtn");
@@ -440,7 +457,7 @@ function loadQuiz(data) {
               var questionFooter1 = document.createElement("h4");
               questionFooter1.setAttribute("id", "questionFooter1");
               questionFooter1.setAttribute("style", "color:black");
-              questionFooter1.innerHTML = "Press Next to Continue";
+              questionFooter1.innerHTML = "Press Next/Previous to move to next questions";
               questionBox.appendChild(questionFooter);
               questionBox.appendChild(questionFooter1);
               event.preventDefault();
@@ -457,7 +474,7 @@ function loadQuiz(data) {
               questionFooter1.innerHTML = "The Correct answer was " + data.answer;
               var questionFooter2 = document.createElement("h4");
               questionFooter2.setAttribute("id", "questionFooter2");
-              questionFooter2.innerHTML = "Press Next to Continue";
+              questionFooter2.innerHTML = "Press Next/Previous to move to next questions";
               questionBox.appendChild(questionFooter);
               questionBox.appendChild(questionFooter1);
               questionBox.appendChild(questionFooter2);
@@ -468,17 +485,19 @@ function loadQuiz(data) {
           });
         });
       
-        //Add Event listner for Previous Button click
-        var previousButton = document.getElementById('previousBtn');
-        previousButton.addEventListener('click', (event) => {
-      
-          var index = event.target.getAttribute("index");
-          var category = event.target.getAttribute("category");
-          console.log("index: ", index);
-          console.log("category: ", category);
-      
-          loadNextQuestion(dataset[category][parseInt(index) - 1]);
-        });
+        if (data.id > 1) {
+          //Add Event listner for Previous Button click
+          var previousButton = document.getElementById('previousBtn');
+          previousButton.addEventListener('click', (event) => {
+        
+            var index = event.target.getAttribute("index");
+            var category = event.target.getAttribute("category");
+            console.log("index: ", index);
+            console.log("category: ", category);
+        
+            loadNextQuestion(dataset[category][parseInt(index) - 1]);
+          });
+        }
       
         var closeBtn = document.getElementById("close-btn");
           closeBtn.addEventListener('click', () => {
@@ -723,7 +742,7 @@ function loadQuiz(data) {
                   var questionFooter1 = document.createElement("h4");
                   questionFooter1.setAttribute("id", "questionFooter1");
                   questionFooter1.setAttribute("style", "color:black");
-                  questionFooter1.innerHTML = "Press Next to Continue";
+                  questionFooter1.innerHTML = "Press Next/Previous to move to next questions";
                   questionBox.appendChild(questionFooter);
                   questionBox.appendChild(questionFooter1);
                   event.preventDefault();
@@ -741,7 +760,7 @@ function loadQuiz(data) {
                   questionFooter1.innerHTML = "The Correct answer was " + data.answer;
                   var questionFooter2 = document.createElement("h4");
                   questionFooter2.setAttribute("id", "questionFooter2");
-                  questionFooter2.innerHTML = "Press Next to Continue";
+                  questionFooter2.innerHTML = "Press Next/Previous to move to next questions";
                   questionBox.appendChild(questionFooter);
                   questionBox.appendChild(questionFooter1);
                   questionBox.appendChild(questionFooter2);
@@ -766,7 +785,6 @@ function loadQuiz(data) {
     radios.forEach((radio) => {
       if (radio.checked == true && radio.value == data.answer) {
         questionBox.removeChild(checkButton);
-        questionBox.appendChild(nextButton);
         radio.setAttribute("style", "accent-color:green");
         var questionFooter = document.createElement("h4");
         questionFooter.setAttribute("id", "questionFooter");
@@ -775,7 +793,7 @@ function loadQuiz(data) {
         var questionFooter1 = document.createElement("h4");
         questionFooter1.setAttribute("id", "questionFooter1");
         questionFooter1.setAttribute("style", "color:black");
-        questionFooter1.innerHTML = "Press Next to Continue";
+        questionFooter1.innerHTML = "Press Next/Previous to move to next questions";
         questionBox.appendChild(questionFooter);
         questionBox.appendChild(questionFooter1);
         event.preventDefault();
@@ -793,13 +811,10 @@ function loadQuiz(data) {
         questionFooter1.innerHTML = "The Correct answer was " + data.answer;
         var questionFooter2 = document.createElement("h4");
         questionFooter2.setAttribute("id", "questionFooter2");
-        questionFooter2.innerHTML = "Press Next to Continue";
+        questionFooter2.innerHTML = "Press Next/Previous to move to next questions";
         questionBox.appendChild(questionFooter);
         questionBox.appendChild(questionFooter1);
         questionBox.appendChild(questionFooter2);
-        // $("input").click(function (e) {
-        //   event.preventDefault();
-        // });
       }
     });
   });

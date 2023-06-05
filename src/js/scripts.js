@@ -47,6 +47,7 @@ musicBtn.addEventListener('click', () => {
   loadQuiz(musicData[0]);
 });
 
+
 // Add Event listener for Modern Art click
 var modernArtBtn = document.getElementById('modernArtButton');
 if (modernArtQuizCompleted ==  true) {
@@ -631,9 +632,22 @@ function loadQuiz(data) {
                 scoreIncorrectText.innerHTML = "Incorrect Answers: " + (10 - score);
                 scoreIncorrectText.setAttribute("style", "color: red;");
       
+                var homeButtonDiv = document.createElement("div");
+                var homeButton = document.createElement("button");
+                homeButton.setAttribute("style", "float:right;background-color: teal;height:30px; width:5%;")
+                var homeButtonText = document.createTextNode("Home");
+                homeButton.appendChild(homeButtonText);
+
+                homeButtonDiv.appendChild(homeButton);
+
+                scoreDiv.appendChild(homeButtonDiv);
                 scoreDiv.appendChild(scoreCorrectText);
                 scoreDiv.appendChild(scoreIncorrectText);
-      
+
+                homeButton.addEventListener('click', () => {
+                  location.reload();
+                });
+
                 // Report Div
                 var generatedReportDiv = document.createElement("div");
                 generatedReportDiv.setAttribute("id", "generatedReportDivFinal");
@@ -675,8 +689,6 @@ function loadQuiz(data) {
                 }
       
                 parentNode.appendChild(scoreDiv);
-      
-                var hrNode2 = document.createElement("hr");
       
                 parentNode.appendChild(generatedReportDiv);
       

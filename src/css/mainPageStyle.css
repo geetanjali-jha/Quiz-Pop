@@ -89,19 +89,19 @@ body {
     width: 100%;
   }
 
-  #musicButton:hover {
+  #musicButton:hover:enabled {
     color: rgb(255,255,255);
     transition: 0.2s 0.1s;
     background-color: black;
   }
 
-  #modernArtButton:hover {
+  #modernArtButton:hover:enabled {
     color: rgb(255,255,255);
     transition: 0.2s 0.1s;
     background-color: black;
   }
 
-  #codingButton:hover {
+  #codingButton:hover:enabled {
     color: rgb(255,255,255);
     transition: 0.2s 0.1s;
     background-color: black;

@@ -3,109 +3,110 @@ body {
 }
 
 #headerBox {
-    text-align: center;
+  text-align: center;
 }
 
 #selectTextBox {
-    text-align: center;
+  text-align: center;
 }
 
 #mainTopicsBox {
-    padding-top: 5%;
-    padding-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100%;
 }
 
 #musicTopic {
-    margin-left: 9.5%;
-    width:25%;
-    background-color: blue;
-    display: inline-block;
-    height: 400px;
-    background-image: url('../images/music.jpg');
-    background-position: center;
+  margin-left: 9.5%;
+  width: 25%;
+  background-color: blue;
+  display: inline-block;
+  height: 400px;
+  background-image: url("../images/music.jpg");
+  background-position: center;
 }
-#modArtTopic{
-    margin-left: 3%;
-    width:25%;
-    background-color: yellow;
-    display: inline-block;
-    height: 400px;
-    background-image: url('../images/modArt.jpg');
-    background-position: center;
+#modArtTopic {
+  margin-left: 3%;
+  width: 25%;
+  background-color: yellow;
+  display: inline-block;
+  height: 400px;
+  background-image: url("../images/modArt.jpg");
+  background-position: center;
 }
-#codingTopic{
-    margin-left: 3%;
-    width:25%;
-    background-color: teal;
-    display: inline-block;
-    height: 400px;
-    background-image: url('../images/coding.jpg');
-    background-position: center;
+#codingTopic {
+  margin-left: 3%;
+  width: 25%;
+  background-color: teal;
+  display: inline-block;
+  height: 400px;
+  background-image: url("../images/coding.jpg");
+  background-position: center;
 }
 
 #buttonBox {
-    display: flex;
+  display: flex;
 }
 
 #musicButton {
-    background-color: teal;
-    width: 10%;
-    text-align: center;
-    padding: 1%;
-    margin-top: 1%;
-    margin-left: 17%;
-    font-size: medium;
-    font-weight: bold;
-    border-radius: 7%;
-  }
-  #modernArtButton {
-    background-color: teal;
-    width: 10%;
-    margin-left: 17.5%;
-    padding: 1%;
-    margin-top: 1%;
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    border-radius: 7%;
-  }
-  #codingButton {
-    background-color: teal;
-    width: 10%;
-    margin-left: 18.5%;
-    padding: 1%;
-    margin-top: 1%;
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    border-radius: 7%;
-  }
+  background-color: teal;
+  width: 10%;
+  text-align: center;
+  padding: 1%;
+  margin-top: 1%;
+  margin-left: 17%;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 7%;
+}
+#modernArtButton {
+  background-color: teal;
+  width: 10%;
+  margin-left: 17.5%;
+  padding: 1%;
+  margin-top: 1%;
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 7%;
+}
+#codingButton {
+  background-color: teal;
+  width: 10%;
+  margin-left: 18.5%;
+  padding: 1%;
+  margin-top: 1%;
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 7%;
+}
 
-  #welcomeTextBox {
-    padding-top: 0;
-    margin-top: 0;
-    background-color: cadetblue;
-    display: inline-block;
-    width: 100%;
-  }
+#welcomeTextBox {
+  padding-top: 0;
+  margin-top: 0;
+  background-color: cadetblue;
+  display: inline-block;
+  width: 100%;
+}
 
-  #musicButton:hover:enabled {
-    color: rgb(255,255,255);
-    transition: 0.2s 0.1s;
-    background-color: black;
-  }
+#musicButton:hover:enabled {
+  color: rgb(255, 255, 255);
+  transition: 0.2s 0.1s;
+  background-color: black;
+}
 
-  #modernArtButton:hover:enabled {
-    color: rgb(255,255,255);
-    transition: 0.2s 0.1s;
-    background-color: black;
-  }
+#modernArtButton:hover:enabled {
+  color: rgb(255, 255, 255);
+  transition: 0.2s 0.1s;
+  background-color: black;
+}
 
-  #codingButton:hover:enabled {
-    color: rgb(255,255,255);
-    transition: 0.2s 0.1s;
-    background-color: black;
-  }
+#codingButton:hover:enabled {
+  color: rgb(255, 255, 255);
+  transition: 0.2s 0.1s;
+  background-color: black;
+}
 
 #footer {
   background-color: #2b333b;
@@ -125,11 +126,10 @@ body {
 }
 
 #scoreDivFinal {
-
 }
 
 #reportDivFinal {
-  height: 120Px;
+  height: 120px;
   border: 1px solid;
   margin-top: 1%;
 }
@@ -144,7 +144,7 @@ body {
 
 #question-box {
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #buttonContainer {
@@ -152,3 +152,38 @@ body {
   width: 100%;
 }
 
+/* responsive media query */
+
+@media (max-width: 801px) {
+  #musicTopic,
+  #modArtTopic,
+  #codingTopic {
+    margin-left: 0;
+    width: 100%;
+  }
+  #buttonBox {
+    flex-direction: column;
+  }
+
+  #musicButton,
+  #modernArtButton,
+  #codingButton {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
+/* @media (max-width: 480) {
+  .words {
+    width: 50%;
+  }
+  .musicButton {
+    width: 5%;
+  }
+  .modernArtButton {
+    width: 5%;
+  }
+  .codingButton {
+    width: 5%;
+  }
+} */
